@@ -11,6 +11,14 @@ GIT
     arel (4.0.0.beta1.20130225132415)
 
 GIT
+  remote: git://github.com/rails/coffee-rails.git
+  revision: 948fef30464235e7588e34faa513b448a00c0e6b
+  specs:
+    coffee-rails (4.0.0.beta1)
+      coffee-script (>= 2.2.0)
+      railties (>= 4.0.0.beta, < 5.0)
+
+GIT
   remote: git://github.com/rails/rails.git
   revision: 6ea48ebfa68947ad66a516bdb7452e0faf3f70a7
   specs:
@@ -93,6 +101,10 @@ GEM
       json
     childprocess (0.3.9)
       ffi (~> 1.0, >= 1.0.11)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.6.1)
     database_cleaner (0.9.1)
     diff-lcs (1.2.1)
     erubis (2.7.0)
@@ -183,6 +195,7 @@ DEPENDENCIES
   annotate
   arel!
   capybara-webkit
+  coffee-rails!
   database_cleaner
   factory_girl_rails
   jbuilder (~> 1.0.1)

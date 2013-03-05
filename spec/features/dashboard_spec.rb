@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-feature "Home Page", %q{As a user
+feature "Dashboard", %q{As a user
         I would like o be able to view a dashboard
         in order to see whats happening with my media} do
 
@@ -8,7 +8,7 @@ feature "Home Page", %q{As a user
     visit '/'
   end
 
-  scenario 'viewing the dashboard' do
+  scenario 'welcome message' do
     page.should have_content "Welcome to Mediator"
   end
 end
