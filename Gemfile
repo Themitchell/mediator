@@ -13,9 +13,7 @@ gem 'jbuilder', '~> 1.0.1'
 
 gem 'carrierwave'
 gem 'permalink_fu'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
+gem 'rmagick'
 
 group :assets do
   gem 'sprockets-rails',  github: 'rails/sprockets-rails'
@@ -25,7 +23,7 @@ group :assets do
 end
 
 group :test, :development do
-  # gem 'debugger'
+  gem 'debugger', '1.4.0'
   gem 'rspec-rails'
 end
 
