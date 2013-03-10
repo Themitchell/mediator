@@ -7,19 +7,22 @@ gem 'activerecord-deprecated_finders', github: 'rails/activerecord-deprecated_fi
 
 gem 'pg'
 
+gem 'jquery-rails'
+gem 'turbolinks'
+gem 'jbuilder', '~> 1.0.1'
+
+gem 'carrierwave'
+gem 'permalink_fu'
+
+# To use ActiveModel has_secure_password
+# gem 'bcrypt-ruby', '~> 3.0.0'
+
 group :assets do
   gem 'sprockets-rails',  github: 'rails/sprockets-rails'
   gem 'sass-rails',       github: 'rails/sass-rails'
   gem 'coffee-rails',     github: 'rails/coffee-rails'
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 1.0.1'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
 
 group :test, :development do
   # gem 'debugger'
