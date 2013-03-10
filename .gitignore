@@ -17,3 +17,6 @@
 
 # DB
 config/database.yml
+
+# Uploads
+public/uploads
