@@ -7,4 +7,8 @@ describe Picture do
     it { should validate_presence_of :name }
   end
 
+  context 'asscoiations' do
+    it { should belong_to :photoalbum }
+  end
+
 end

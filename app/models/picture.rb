@@ -1,5 +1,8 @@
 class Picture < ActiveRecord::Base
 
+  # Associations
+  belongs_to :photoalbum
+
   # Validations
   validates :file, presence: true
   validates :name, presence: true

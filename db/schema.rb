@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130309193612) do
+ActiveRecord::Schema.define(version: 20130320215214) do
+
+  create_table "photoalbums", force: true do |t|
+    t.string   "name"
+    t.string   "permalink"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "pictures", force: true do |t|
     t.string   "file"
@@ -19,6 +26,9 @@ ActiveRecord::Schema.define(version: 20130309193612) do
     t.string   "permalink"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "photoalbum_id"
   end
+
+  add_index "pictures", ["photoalbum_id"], name: "index_pictures_on_photoalbum_id"
 
 end
