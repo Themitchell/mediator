@@ -4,7 +4,7 @@ describe PicturesController do
 
   describe "GET 'index'" do
     let!(:picture) { create :picture }
-    before { get :index }
+    before { get :index, photoalbum_id: picture.photoalbum }
 
     it 'assigns pictures' do
       pictures = assigns(:pictures)
