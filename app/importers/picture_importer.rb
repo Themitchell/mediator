@@ -23,8 +23,9 @@ class PictureImporter
 
     if ['.jpg', '.jpeg'].include? File.extname(path)
       file_data = EXIFR::JPEG.new(file)
-      attributes.merge!({  lat:  file_data.gps_lat,
-                          lng: file_data.gps_lng })
+      attributes.merge!({ lat:  file_data.gps_lat,
+                          lng: file_data.gps_lng,
+                          file_creation_date: file_data.date_time })
     end
     Picture.create!(attributes)
   end

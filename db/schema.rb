@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130320235927) do
+ActiveRecord::Schema.define(version: 20130321185416) do
 
   create_table "photoalbums", force: true do |t|
     t.string   "name"
@@ -29,6 +29,7 @@ ActiveRecord::Schema.define(version: 20130320235927) do
     t.integer  "photoalbum_id"
     t.float    "lat"
     t.float    "lng"
+    t.datetime "file_creation_date"
   end
 
   add_index "pictures", ["photoalbum_id"], name: "index_pictures_on_photoalbum_id"
