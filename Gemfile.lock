@@ -1,4 +1,10 @@
 GIT
+  remote: git://github.com/picuous/exifr.git
+  revision: 1911eff333f7498b8a8de22c3d27e413889d8572
+  specs:
+    exifr (1.0.3)
+
+GIT
   remote: git://github.com/rails/activerecord-deprecated_finders.git
   revision: 5937f3e7102f9be461ce2dccaef0e4d14e92cd35
   specs:
@@ -212,6 +218,7 @@ DEPENDENCIES
   coffee-rails!
   database_cleaner
   debugger (= 1.4.0)
+  exifr!
   factory_girl_rails
   jbuilder (~> 1.0.1)
   jquery-rails

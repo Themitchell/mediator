@@ -1,12 +1,11 @@
 class PictureImporter
 
-  def self.start(*args)
-    new(args).start
-  end
+  # def self.start(path, *args)
+  #   # new(args).start
+  # end
 
-  def initialize(*args)
-    dir_path = File.join(Rails.root, 'spec', 'fixtures', 'images')
-    @files = Dir.glob(File.join(dir_path, '*'))
+  def initialize(path, *args)
+    @files = Dir.glob(File.join(path, '*'))
   end
 
   def start
@@ -17,7 +16,16 @@ class PictureImporter
 
   private
   def create_from_file(path)
-    file = File.open(path) if File.exists? path
-    Picture.create!( file: file, name: File.basename(path) )
+    return unless File.exists? path
+    file = File.open(path)
+    attributes = {  file: file,
+                    name: File.basename(path) }
+
+    if ['.jpg', '.jpeg'].include? File.extname(path)
+      file_data = EXIFR::JPEG.new(file)
+      attributes.merge!({  lat:  file_data.gps_lat,
+                          lng: file_data.gps_lng })
+    end
+    Picture.create!(attributes)
   end
 end
