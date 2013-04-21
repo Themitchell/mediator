@@ -14,6 +14,7 @@ gem 'jbuilder', '~> 1.0.1'
 gem 'carrierwave'
 gem 'permalink_fu'
 gem 'rmagick'
+gem 'uuid'
 gem 'exifr',      git: 'git://github.com/picuous/exifr.git'
 
 group :assets do
